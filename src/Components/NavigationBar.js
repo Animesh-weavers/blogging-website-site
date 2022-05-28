@@ -49,7 +49,7 @@ const NavigationBar = () => {
             )}
             {/* {authCtx.isLoggedIn && <Nav.Link style={{ background: '#FBDE59', borderRadius: '10px', paddingRight: '2rem', paddingLeft: '2rem', color: 'black', fontWeight: 'bold' }} onClick={() => authCtx.logout()}>Logout</Nav.Link>} */}
             {authCtx.isLoggedIn && (
-              <NavDropdown title="User" id="navbarScrollingDropdown">
+              <NavDropdown title="Profile" id="navbarScrollingDropdown">
                 <NavDropdown.Item as={Link} to="/changepassword">
                   ChangePassword
                 </NavDropdown.Item>
