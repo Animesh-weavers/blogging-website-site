@@ -8,6 +8,7 @@ import ForgetPassword from "./Components/ForgetPassword";
 import AuthContext from "./Auth/auth-context";
 import { Navigate } from "react-router-dom";
 import Home from "./Components/Home";
+import AddBlog from "./Components/AddBlog";
 
 const App = () => {
   const authCtx = useContext(AuthContext);
@@ -17,6 +18,7 @@ const App = () => {
       <NavigationBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        {authCtx.isLoggedIn &&<Route path="/addblog" element={<AddBlog />} />}
         {!authCtx.isLoggedIn && <Route path="/login" element={<Login />} />}
         {!authCtx.isLoggedIn && <Route path="/signup" element={<Signup />} />}
         {authCtx.isLoggedIn && (
